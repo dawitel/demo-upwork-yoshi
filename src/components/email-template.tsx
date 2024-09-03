@@ -9,7 +9,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 }) => (
   <div>
     <h1>
-      Hi {firstName}✋! This is the Scraped data from your last upload! Enjoy your data🎉!
+      Hi {firstName}✋! This is the Scraped data from your last upload. Enjoy your data🎉!
     </h1>
   </div>
 );

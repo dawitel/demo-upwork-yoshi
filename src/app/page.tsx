@@ -4,12 +4,16 @@ import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import CsvUpload from "@/components/fileupload";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
   const { toast } = useToast();
   const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(false);
   const handleFileUpload = async (file: File) => {
     console.log("clicked");
+    setIsLoading(true);
     const formData = new FormData();
     formData.append("file", file);
 
@@ -35,10 +39,11 @@ export default function Home() {
           action: <ToastAction altText="try again">Try again</ToastAction>,
         });
       }
+      setIsLoading(false);
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Sorry, Failked to upload your file ",
+        title: "Sorry, Failed to upload your file ",
         description: "Please try uploading the file again",
         action: <ToastAction altText="try again">Try again</ToastAction>,
       });
@@ -51,9 +56,9 @@ export default function Home() {
         <p className="rounded-2xl bg-gray-200 hover:bg-gray-100 cursor-pointer transition px-4 py-1.5 text-sm font-medium">
           👋Hi Yoshi!
         </p>
-        <h1 className="font-sans text-balance font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="font-sans text-balance rounded-xl shadow-2xl py-4 px-4 font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
           Upload Your CSV file{" "}
-          <span className="cursor-pointer hover:translate-y-3 hover:shadow-xl">
+          <span className="cursor-pointer hover:translate-y-3 rounded-md hover:shadow-2xl">
             📁
           </span>
         </h1>
@@ -61,11 +66,24 @@ export default function Home() {
           Drop the CSV file here and wait for the result to be droped in your
           inbox.{" "}
         </p>
-          <p className="rounded-2xl bg-gray-200 font-bold transition px-4 py-1.5 text-sm mb-3">
-            Avg. waiting time is 5.5 minutes
-          </p>
+        <p className="rounded-2xl bg-gray-100 font-light transition px-4 py-1.5 text-sm mb-3">
+          Avg. waiting time is{" "}
+          <span className="font-extrabold text-green-800">5.5 minutes</span>
+        </p>
         <div>
-          <CsvUpload onFileUpload={handleFileUpload} />
+          {isLoading ? (
+            <CsvUpload
+              onFileUpload={handleFileUpload}
+              btnText="Uploading..."
+              isLoading={isLoading}
+            />
+          ) : (
+            <CsvUpload
+              onFileUpload={handleFileUpload}
+              btnText="Upload CSV File"
+              isLoading={isLoading}
+            />
+          )}
         </div>
       </div>
     </main>

@@ -3,12 +3,19 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { ToastAction } from "@radix-ui/react-toast";
+import { UploadIcon } from "@radix-ui/react-icons";
 
 interface CsvUploadProps {
   onFileUpload: (file: File) => void;
+  btnText: string;
+  isLoading: boolean;
 }
 
-const CsvUpload: React.FC<CsvUploadProps> = ({ onFileUpload }) => {
+const CsvUpload: React.FC<CsvUploadProps> = ({
+  onFileUpload,
+  btnText,
+  isLoading,
+}) => {
   const { toast } = useToast();
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -22,9 +29,7 @@ const CsvUpload: React.FC<CsvUploadProps> = ({ onFileUpload }) => {
         variant: "destructive",
         title: "The file you're trying to upload is not supported!",
         description: "Try uploading a CSV file",
-        action: (
-          <ToastAction altText="cancel">Cancel</ToastAction>
-        ),
+        action: <ToastAction altText="cancel">Cancel</ToastAction>,
       });
     }
   };
@@ -52,8 +57,12 @@ const CsvUpload: React.FC<CsvUploadProps> = ({ onFileUpload }) => {
       <Button
         onClick={handleUploadClick}
         className="bg-blue-500 hover:bg-blue-500 hover:text-gray-200 text-white px-4 py-2 rounded"
+        disabled={isLoading}
       >
-        Upload CSV File
+        <div className="flex gap-x-2 items-center justify-center">
+          <UploadIcon />
+          <p>{btnText}</p>
+        </div>
       </Button>
     </div>
   );
