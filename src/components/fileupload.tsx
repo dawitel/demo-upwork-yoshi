@@ -47,23 +47,38 @@ const CsvUpload: React.FC<CsvUploadProps> = ({
   };
 
   return (
-    <div className="flex space-x-4">
-      <Input
-        type="file"
-        accept=".csv"
-        onChange={handleFileChange}
-        className="bg-slate-200 h-9.5 text-slate-900"
-      />
-      <Button
-        onClick={handleUploadClick}
-        className="bg-blue-500 hover:bg-blue-500 hover:text-gray-200 text-white px-4 py-2 rounded"
-        disabled={isLoading}
-      >
-        <div className="flex gap-x-2 items-center justify-center">
-          <UploadIcon />
-          <p>{btnText}</p>
-        </div>
-      </Button>
+    <div className="bg-blue-100 rounded-xl">
+      <div className="flex p-6 flex-col items-center justify-center gap-4">
+        <Input
+          type="file"
+          accept=".csv"
+          onChange={handleFileChange}
+          className="bg-white h-9.5 text-slate-900"
+        />
+
+        <Input
+          type="email"
+          onChange={() => console.log("email")}
+          className="bg-white h-9.5 text-slate-900 placeholder:text-x"
+          placeholder="Enter your email to recieve the final file..."
+        />
+        <Input
+          type="text"
+          onChange={() => console.log("store name")}
+          className="bg-white h-9.5 text-slate-900 placeholder:text-sm"
+          placeholder="Enter the store name you are looking for..."
+        />
+        <Button
+          onClick={handleUploadClick}
+          className="bg-blue-500 hover:bg-blue-500 w-full hover:text-gray-200 text-white px-4 py-2 rounded"
+          disabled={isLoading}
+        >
+          <div className="flex gap-x-2 items-center justify-center">
+            <UploadIcon />
+            <p>{btnText}</p>
+          </div>
+        </Button>
+      </div>
     </div>
   );
 };
