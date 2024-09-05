@@ -53,10 +53,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-        <p className="rounded-2xl bg-gray-200 hover:bg-gray-100 cursor-pointer transition px-4 py-1.5 text-sm font-medium">
-          👋Hi Yoshi!
-        </p>
-        <h1 className="font-sans text-balance rounded-xl shadow-2xl py-4 px-4 font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="font-sans text-balance rounded-xl shadow-2xl px-4 font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
           Upload Your CSV file{" "}
           <span className="cursor-pointer hover:translate-y-3 rounded-md hover:shadow-2xl">
             📁
