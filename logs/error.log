@@ -1,0 +1,28 @@
+2024-09-12T14:37:51.193Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:08:47.728Z error: Error occurred while sending the email The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object
+2024-09-13T00:08:47.820Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:08:47.835Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:14:07.868Z error: Error occurred while sending the email The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object
+2024-09-13T00:14:07.938Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:14:37.368Z error: Error occurred while sending the email The "chunk" argument must be of type string or an instance of Buffer or Uint8Array. Received an instance of Object
+2024-09-13T00:14:37.376Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:20:48.787Z error: Error scraping URL https://www.ebay.com/sch/i.html?_from=R40&_nkw=ICOM+IC-703+-AT-180&_sacat=0&_udlo=100&_sop=15&rt=nc&LH_ItemCondition=4: net::ERR_CONNECTION_TIMED_OUT at https://www.ebay.com/sch/i.html?_from=R40&_nkw=ICOM+IC-703+-AT-180&_sacat=0&_udlo=100&_sop=15&rt=nc&LH_ItemCondition=4
+2024-09-13T00:21:20.070Z error: Error scraping URL https://www.ebay.com/sch/i.html?_nkw=ICOM%20IC-746&_udlo=400&_saact=1&LH_AvailTo=1&_sop=15&_oac=1&rt=nc: net::ERR_CONNECTION_TIMED_OUT at https://www.ebay.com/sch/i.html?_nkw=ICOM%20IC-746&_udlo=400&_saact=1&LH_AvailTo=1&_sop=15&_oac=1&rt=nc
+2024-09-13T00:21:51.502Z error: Error scraping URL https://www.ebay.com/sch/i.html?_nkw=Bang%20Olufsen%20Beoplay%20H8&_udlo=180&_saact=1&LH_AvailTo=1&_sop=15&rt=nc: net::ERR_CONNECTION_TIMED_OUT at https://www.ebay.com/sch/i.html?_nkw=Bang%20Olufsen%20Beoplay%20H8&_udlo=180&_saact=1&LH_AvailTo=1&_sop=15&rt=nc
+2024-09-13T00:22:25.034Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:22:25.055Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:27:31.989Z error: Error occurred while sending the email Email template did not return a string
+2024-09-13T00:27:32.009Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:27:32.028Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:31:58.144Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:35:38.012Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:35:38.027Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:39:12.548Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:42:39.124Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:47:14.844Z error: Error occurred while sending the email Can't send mail - all recipients were rejected: 554 5.7.1 Demo domains can only be used to send emails to account owners. You can only send testing emails to your own email address.
+2024-09-13T00:47:14.863Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:47:14.873Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:53:48.942Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:53:48.950Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
+2024-09-13T00:56:17.107Z error: Error occurred while sending the scraped data: Request failed with status code 500
+2024-09-13T00:56:17.113Z error: Error sending data to scrape API: AxiosError: Request failed with status code 500
